@@ -1,24 +1,24 @@
 import { FrameworkPhase, BrandingAsset } from './types';
 
 export const BRANDING_MODULES_META = [
-    {
-        id: 'visual',
-        title: 'Visual Identity',
-        description: 'Couleurs, Typographie et éléments graphiques.',
-        iconName: 'Palette'
-    },
-    {
-        id: 'voice',
-        title: 'Brand Voice',
-        description: 'Ton, Archétype et Règles d\'écriture.',
-        iconName: 'Mic2'
-    },
-    {
-        id: 'assets',
-        title: 'Asset Library',
-        description: 'Liens vers Drive, Figma, Logos.',
-        iconName: 'FolderOpen'
-    }
+  {
+    id: 'visual',
+    title: 'Visual Identity',
+    description: 'Couleurs, Typographie et éléments graphiques.',
+    iconName: 'Palette'
+  },
+  {
+    id: 'voice',
+    title: 'Brand Voice',
+    description: 'Ton, Archétype et Règles d\'écriture.',
+    iconName: 'Mic2'
+  },
+  {
+    id: 'assets',
+    title: 'Asset Library',
+    description: 'Liens vers Drive, Figma, Logos.',
+    iconName: 'FolderOpen'
+  }
 ];
 
 export const FRAMEWORK_DATA: FrameworkPhase[] = [
@@ -26,7 +26,7 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
     id: 'identity',
     title: 'Identité',
     subtitle: 'Module 0',
-    unlockCode: 'OPEN', 
+    unlockCode: import.meta.env.VITE_CODE_IDENTITY || 'OPEN',
     goal: 'Initialiser le "Cerveau Marketing" du projet.',
     strategies: [
       'Définir la Mission (Le "Pourquoi")',
@@ -45,7 +45,7 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
     id: 'offre',
     title: 'Offre & Écosystème',
     subtitle: 'Module 1',
-    unlockCode: 'START',
+    unlockCode: import.meta.env.VITE_CODE_OFFRE || 'START',
     goal: 'Construire un écosystème d\'offres irrésistible et benchmarker le marché.',
     strategies: [
       'Valider l\'Avatar',
@@ -68,11 +68,11 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             importance: 'mandatory',
             description: 'Imaginez votre client idéal. Celui avec qui c\'est un plaisir de travailler et qui paye cher.',
             specificInputs: [
-                { id: 'name', label: 'Nom & Âge', type: 'text', placeholder: 'Ex: Jean, 32 ans' },
-                { id: 'job', label: 'Profession', type: 'text', placeholder: 'Ex: Cadre Commercial' },
-                { id: 'pain', label: 'Douleur N°1 (Nuit blanche)', type: 'textarea', placeholder: 'Qu\'est-ce qui l\'empêche de dormir ?' },
-                { id: 'desire', label: 'Désir N°1 (Magique)', type: 'textarea', placeholder: 'Si vous aviez une baguette magique, que voudrait-il ?' },
-                { id: 'objection', label: 'Objection Principale', type: 'text', placeholder: 'Pourquoi il n\'a pas déjà acheté ?' }
+              { id: 'name', label: 'Nom & Âge', type: 'text', placeholder: 'Ex: Jean, 32 ans' },
+              { id: 'job', label: 'Profession', type: 'text', placeholder: 'Ex: Cadre Commercial' },
+              { id: 'pain', label: 'Douleur N°1 (Nuit blanche)', type: 'textarea', placeholder: 'Qu\'est-ce qui l\'empêche de dormir ?' },
+              { id: 'desire', label: 'Désir N°1 (Magique)', type: 'textarea', placeholder: 'Si vous aviez une baguette magique, que voudrait-il ?' },
+              { id: 'objection', label: 'Objection Principale', type: 'text', placeholder: 'Pourquoi il n\'a pas déjà acheté ?' }
             ],
             mediaType: 'text',
             mediaContent: 'Soyez précis. "Homme 30 ans" est nul. "Jean, 32 ans, cadre fatigué qui veut quitter la rat race mais a peur pour sa sécurité financière" est excellent.'
@@ -83,8 +83,8 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             importance: 'recommended',
             description: 'Un profil différent qui achète aussi, mais pour des raisons différentes.',
             specificInputs: [
-                { id: 'name', label: 'Nom', type: 'text', placeholder: 'Ex: Sophie' },
-                { id: 'diff', label: 'Différence majeure', type: 'textarea', placeholder: 'Pourquoi est-elle différente de l\'avatar 1 ?' }
+              { id: 'name', label: 'Nom', type: 'text', placeholder: 'Ex: Sophie' },
+              { id: 'diff', label: 'Différence majeure', type: 'textarea', placeholder: 'Pourquoi est-elle différente de l\'avatar 1 ?' }
             ],
             mediaType: 'text'
           },
@@ -112,10 +112,10 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             importance: 'mandatory',
             description: 'Votre produit phare. Celui qui résout le problème principal.',
             specificInputs: [
-                { id: 'name', label: 'Nom de l\'offre', type: 'text', placeholder: 'Ex: Transformation 90 Jours' },
-                { id: 'price', label: 'Prix de vente', type: 'number', placeholder: '1000' },
-                { id: 'promise', label: 'Promesse (One Big Promise)', type: 'textarea', placeholder: 'Ex: Perdez 10kg en 90 jours ou on vous rembourse.' },
-                { id: 'deliverable', label: 'Livrable Concret', type: 'textarea', placeholder: 'Ex: 12 appels, Accès plateforme, Plan alimentaire...' }
+              { id: 'name', label: 'Nom de l\'offre', type: 'text', placeholder: 'Ex: Transformation 90 Jours' },
+              { id: 'price', label: 'Prix de vente', type: 'number', placeholder: '1000' },
+              { id: 'promise', label: 'Promesse (One Big Promise)', type: 'textarea', placeholder: 'Ex: Perdez 10kg en 90 jours ou on vous rembourse.' },
+              { id: 'deliverable', label: 'Livrable Concret', type: 'textarea', placeholder: 'Ex: 12 appels, Accès plateforme, Plan alimentaire...' }
             ],
             mediaType: 'text',
             mediaContent: 'L\'offre principale doit être "No-Brainer". La valeur perçue doit être 10x supérieure au prix.'
@@ -126,8 +126,8 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             importance: 'recommended',
             description: 'Que pouvez-vous vendre immédiatement après l\'achat pour aider le client à aller plus vite ?',
             specificInputs: [
-                { id: 'name', label: 'Nom de l\'Upsell', type: 'text', placeholder: 'Ex: VIP Day' },
-                { id: 'price', label: 'Prix', type: 'number', placeholder: '500' }
+              { id: 'name', label: 'Nom de l\'Upsell', type: 'text', placeholder: 'Ex: VIP Day' },
+              { id: 'price', label: 'Prix', type: 'number', placeholder: '500' }
             ],
             mediaType: 'text'
           },
@@ -163,10 +163,10 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             importance: 'mandatory',
             description: 'Le leader incontesté du marché (celui qui fait des millions).',
             specificInputs: [
-                { id: 'name', label: 'Nom du concurrent', type: 'text', placeholder: '' },
-                { id: 'url', label: 'Site Web / Funnel', type: 'text', placeholder: 'https://...' },
-                { id: 'strength', label: 'Leur Super-Pouvoir', type: 'textarea', placeholder: 'Pourquoi sont-ils n°1 ?' },
-                { id: 'weakness', label: 'Leur Faiblesse', type: 'textarea', placeholder: 'Que font-ils mal ?' }
+              { id: 'name', label: 'Nom du concurrent', type: 'text', placeholder: '' },
+              { id: 'url', label: 'Site Web / Funnel', type: 'text', placeholder: 'https://...' },
+              { id: 'strength', label: 'Leur Super-Pouvoir', type: 'textarea', placeholder: 'Pourquoi sont-ils n°1 ?' },
+              { id: 'weakness', label: 'Leur Faiblesse', type: 'textarea', placeholder: 'Que font-ils mal ?' }
             ],
             mediaType: 'text',
             mediaContent: 'Analysez leur funnel. Achetez leur produit si nécessaire. C\'est votre benchmark de qualité.'
@@ -212,9 +212,9 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             importance: 'mandatory',
             description: 'Votre idée principale pour attirer des leads qualifiés.',
             specificInputs: [
-                { id: 'title', label: 'Titre Accrocheur', type: 'text', placeholder: 'Ex: 7 Étapes pour...' },
-                { id: 'format', label: 'Format', type: 'select', options: ['PDF/Ebook', 'Vidéo Training', 'Template/Outil', 'Webinar'], placeholder: 'Choisir...' },
-                { id: 'promise', label: 'Promesse', type: 'text', placeholder: 'Résultat en X temps' }
+              { id: 'title', label: 'Titre Accrocheur', type: 'text', placeholder: 'Ex: 7 Étapes pour...' },
+              { id: 'format', label: 'Format', type: 'select', options: ['PDF/Ebook', 'Vidéo Training', 'Template/Outil', 'Webinar'], placeholder: 'Choisir...' },
+              { id: 'promise', label: 'Promesse', type: 'text', placeholder: 'Résultat en X temps' }
             ],
             mediaType: 'text'
           },
@@ -316,7 +316,7 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
     id: 'contenu',
     title: 'Acquisition',
     subtitle: 'Module 2',
-    unlockCode: 'SCALE',
+    unlockCode: import.meta.env.VITE_CODE_CONTENU || 'SCALE',
     goal: 'Produire les 15-30 premières créatives de test.',
     strategies: [
       'Produire les scripts',
@@ -343,13 +343,13 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
             mediaContent: 'Utilisez les Personas définis dans le Module 1. Quel angle parle au Persona "Marcus" ? (Probablement l\'angle ROI/Gain de temps).'
           },
           {
-             id: 'hooks-brainstorm',
-             title: 'Brainstorming Hooks (10)',
-             importance: 'mandatory',
-             description: 'Les 3 premières secondes. Écrivez 10 variations.',
-             placeholder: '1. Arrêtez de faire ça...\n2. Voici comment j\'ai...',
-             mediaType: 'text',
-             mediaContent: 'Le Hook est responsable de 80% de la performance de la vidéo.'
+            id: 'hooks-brainstorm',
+            title: 'Brainstorming Hooks (10)',
+            importance: 'mandatory',
+            description: 'Les 3 premières secondes. Écrivez 10 variations.',
+            placeholder: '1. Arrêtez de faire ça...\n2. Voici comment j\'ai...',
+            mediaType: 'text',
+            mediaContent: 'Le Hook est responsable de 80% de la performance de la vidéo.'
           }
         ]
       }
@@ -370,7 +370,7 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
     id: 'frontend',
     title: 'Conversion',
     subtitle: 'Module 3',
-    unlockCode: 'FUNNEL',
+    unlockCode: import.meta.env.VITE_CODE_FRONTEND || 'FUNNEL',
     goal: 'Créer la première version du SaaS / Funnel.',
     strategies: [
       'Créer la première version du SaaS/Page',
@@ -394,7 +394,7 @@ export const FRAMEWORK_DATA: FrameworkPhase[] = [
     id: 'backend',
     title: 'Rétention',
     subtitle: 'Module 4',
-    unlockCode: 'LIFETIME',
+    unlockCode: import.meta.env.VITE_CODE_BACKEND || 'LIFETIME',
     goal: 'Avoir une première version du Business Model qui marche.',
     strategies: [
       'Configurer les emails de bienvenue',
@@ -425,24 +425,24 @@ export const DEFAULT_CLIENT_DATA: any = {
   clientName: 'Nouveau Projet',
   clientDomain: '',
   identity: {
-      version: 'V1',
-      mission: '',
-      targetAudienceSummary: '',
-      selectedDomainPrefix: 'go'
+    version: 'V1',
+    mission: '',
+    targetAudienceSummary: '',
+    selectedDomainPrefix: 'go'
   },
   objectives: {
-      smartGoal: '',
-      deadline: '',
-      currentSituation: '',
-      motivation: ''
+    smartGoal: '',
+    deadline: '',
+    currentSituation: '',
+    motivation: ''
   },
   brandVoice: {
-      tone: '',
-      archetype: '',
-      vocabulary: '',
-      forbidden: ''
+    tone: '',
+    archetype: '',
+    vocabulary: '',
+    forbidden: ''
   },
-  unlockedPhases: ['identity'], 
+  unlockedPhases: ['identity'],
   activePhaseId: 'identity',
   completedItems: [],
   userInputs: {},
