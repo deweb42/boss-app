@@ -1,0 +1,56 @@
+{
+  "name": "acquisition-framework-os",
+  "private": true,
+  "version": "1.0.0",
+  "main": "electron/main.cjs",
+  "author": "Acquisition Framework",
+  "description": "A premium, local-first dashboard to visualize and track the client acquisition framework process.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.acquisition.framework",
+    "productName": "Acquisition OS",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "mac": {
+      "icon": "public/icon.png",
+      "target": "dmg"
+    },
+    "win": {
+      "icon": "public/icon.png",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "public/icon.png",
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
+    "wait-on": "^7.2.0"
+  }
+}
