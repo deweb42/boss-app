@@ -1,10 +1,10 @@
 {
-  "name": "boss-app",
+  "name": "acquisition-framework-os",
   "private": true,
   "version": "1.0.0",
   "main": "electron/main.cjs",
-  "author": "BOSS App",
-  "description": "The BOSS App for business owners.",
+  "author": "Acquisition Framework",
+  "description": "A premium, local-first dashboard to visualize and track the client acquisition framework process.",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,8 +13,8 @@
     "electron:build": "vite build && electron-builder"
   },
   "build": {
-    "appId": "com.boss.app",
-    "productName": "BOSS App",
+    "appId": "com.acquisition.framework",
+    "productName": "Acquisition OS",
     "directories": {
       "output": "release"
     },
